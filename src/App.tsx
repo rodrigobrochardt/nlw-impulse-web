@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import styles from "./App.module.scss";
+import { LoginBox } from "./components/LoginBox";
+import { MessageList } from "./components/MessageList";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export function App() {
   return (
-   <div>Hello World</div>
+   <main className={styles.contentWrapper}>
+    <MessageList/>
+    <LoginBox/>
+   </main>
   )
 }
 
-export default App
